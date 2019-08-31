@@ -1,5 +1,7 @@
 REM Adapted from https://github.com/charlesdh/addfwrs by Charles de Havilland
 @echo off
+@setlocal enableextensions
+@cd /d "%~dp0"
 cls
 set /p RULENAME="Type rule name: "
 ECHO Create in/out firewall rules to ALLOW *.exe files with the rulename of "%RULENAME%" ?

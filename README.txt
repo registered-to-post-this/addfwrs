@@ -1,4 +1,6 @@
 Adapted from https://github.com/charlesdh/addfwrs by Charles de Havilland.
-All credit for Windows 10 fix goes to Simon P Stevens: https://www.codeproject.com/Tips/119828/Running-a-bat-file-as-administrator-Correcting-cur
 
-Run batch as admin from dir. Type rule name (supports spaces) and hit enter.
+Run batch as admin from topmost directory you want to add rules for. Rules will be created for all .exe files in the directory the batch is run from and in all subdirectories.
+
+Rule name format: DirectoryNameWhereBatchIsExecuted-ExeName.exe
+Subdirectories are not appended to the rule name. e.g. running from C:\Program Files\Mozilla Firefox\ will result in rules such as "Mozilla Firefox-helper.exe" even though helper.exe is in C:\Program Files\Mozilla Firefox\uninstall\

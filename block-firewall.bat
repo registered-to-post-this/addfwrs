@@ -11,10 +11,6 @@ FOR /r %%G in ("*.exe") Do (@echo %%G
 NETSH advfirewall firewall add rule name="%RULENAME%-%%~nxG" dir=in program="%%G" action="block" enable="yes")
 FOR /r %%G in ("*.exe") Do (@echo %%G
 NETSH advfirewall firewall add rule name="%RULENAME%-%%~nxG" dir=out program="%%G" action="block" enable="yes")
-FOR /r %%G in ("*.dll") Do (@echo %%G
-NETSH advfirewall firewall add rule name="%RULENAME%-%%~nxG" dir=in program="%%G" action="block" enable="yes")
-FOR /r %%G in ("*.dll") Do (@echo %%G
-NETSH advfirewall firewall add rule name="%RULENAME%-%%~nxG" dir=out program="%%G" action="block" enable="yes")
 exit
 :NotAdmin
 echo You must run this batch file as administrator. No rules have been added.
